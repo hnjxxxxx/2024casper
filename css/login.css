@@ -23,6 +23,11 @@
   top: 10%;
 }
 #login legend{display: none;}
+#login fieldset > a{
+  position:absolute;
+  left:50%; top:30px;
+  transform:translateX(-50%);
+}
 #login p:first-of-type{padding-top:80px;}
 #login p:first-of-type label{display: none;}
 #login p:nth-of-type(2) label{display: none;}

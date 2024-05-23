@@ -2,29 +2,13 @@
 
 main{}
 main > section{}
-.popup{
-  width:100%;height:100%;
-  position:fixed;
-  top:0px; left:0px;
-  background-color: rgba(0,0,0,0.6);
-  z-index: 1000;
-}
-.popup-inner{
-  background-color: #eee;
-  width:450px;
-  height:625px;
-  position:absolute;
-  margin:auto;
-  top:50%; left:50%;
-  transform:translate(-50%, -50%);
-}
-.popup-close{float:right; border:none;} 
-#intro{
+/* 메인 인트로 섹션 서식 */
+#main-intro{
   width:100%;height:100vh;
   overflow: hidden;
   color:var(--bg-color03);
 }
-#intro article{
+#main-intro article{
   position:absolute;
   width:100%;
   top:36%;
@@ -32,15 +16,15 @@ main > section{}
   text-align: center;
   font-size:var(--font-size2);
 }
-#intro article p{
+#main-intro article p{
   line-height:80px;
 }
-#intro article a{
+#main-intro article a{
   color:var(--bg-color03);
   font-size:var(--font-size2);
   padding:5px 10px;
 }
-#intro article a:first-of-type{
+#main-intro article a:first-of-type{
   background-color: var(--sub-color01);
 
 }
@@ -59,7 +43,312 @@ main > section{}
   padding-bottom:20px;
   text-align: center;
 }
+/* 각 섹션별 여백설정 */
+#top3, #test_drive, #event_promo, #buy, #cs{
+  margin:150px auto;
+  width:1200px;
+}
+/* top3콘텐츠 서식 */
+#top3{text-align: center;overflow: hidden;}
+.sect-title2{
+  font-size:30px;
+  font-weight:bold;
+  padding-bottom:20px;
+  text-align: center;
+}
+.p01{
+  font-size:var(--font-size2);
+  line-height:50px;
+  text-align: center;
+}
+/* top3슬라이드 서식 */
+.top3{
+  position:relative; /* 부모지정해야 좌우버튼이 슬라이드내부로 들어옴*/
+  margin-top:50px;
+  padding:20px 0px 50px 0px; /* Swiper에 패딩값을 주면, 'Swiper밖에 위치한' pagination의 위치 이동 */
+}
+.top3 .swiper-wrapper{
+  width:100%; height:100%;
+}
+.top3 .swiper-slide img{
+  transition:0.8s;  
+}
+.top3 .swiper-slide-active img{
+  transform:scale(1.3);
+}
+.rank{
+  color:#327186;
+  border:1px solid #327186;
+  padding:6px 30px;
+  border-radius:20px;
+  font-size:var(--font-size1);
+}
+.top3_title{
+  font-size:26px;
+  font-weight:500;
+  padding-top:30px;
+  color:var(--sub-color01);
+}
+.top3 img{
+  width:400px;
+  padding:80px 0px;
+}
+.detail{
+  display: flex;
+  justify-content: center;
+  padding-bottom:60px;
+}
+.detail li{
+  width:190px;
+  border-right:1px solid #ccc;
+  padding:0px 20px;
+  font-size:var(--font-size2);
+  line-height:20px;
+  text-align: left;
+}
+.detail li:last-child{border:none;}
+.price{
+  font-size:32px;
+  font-weight:500;
+  color:#043e96;
+}
+.outer_color, .inner_color{
+  /* display:inline-block; */
+  float:left; /* float속성을 주면, 요소는 무조건 block요소가 됨*/
+  width:56px; height:40px;
+  text-indent:-9999px;
+  margin-right:10px;
+}
+.kaki{background-color: #494b32;}
+.black{background-color: #000;}
+.blue{background-color: #030d4d;}
+.grey{background-color: #8a8a8b;}
+.ivory{background-color: #dddad2;}
+.top3 .swiper-pagination-bullet{
+  background-color:var(--f-color01);
+  width:70px; height:7px;
+}
+.top3 .swiper-pagination-bullet-active{
+  background-color: ;
+}
+.top3 .swiper-button-prev, .top3 .swiper-button-next{
+  color:rgba(0,0,0,0.5);
+  font-weight:bold;
+}
 
+/* 3. 소개 intro */
+#intro{
+  height:860px;
+  overflow:hidden;
+  position:relative;
+}
+#intro .sect-title2{
+  position:absolute;
+  top:60px;
+  z-index:100;
+  text-align: center;
+  width:100%;
+  
+}
+.intro_title_left, .intro_title_right{
+  position:absolute;
+  z-index: 100;
+  font-size:30px;
+  font-weight:500;
+  line-height: 40px;
+}
+@keyframes ani1{
+  0%{opacity:0;}
+  70%{opacity:0;}
+  100%{opacity:1;}
+}
+@keyframes ani2{
+  0%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:1;}
+}
+.intro_title_left{
+  top:100px; left:30px;
+  animation:ani1 5s;
+}
+.intro_title_right{
+  bottom:200px; right:150px;
+  text-align: right;
+  animation:ani2 5s;
+}
+#intro video{
+  width:100%;
+  position:relative;
+  top:-100px;
+}
+/* 더보기 버튼 */
+#intro .btn{
+  position:absolute;
+  z-index: 100;
+  bottom:60px; left:50%;
+  transform:translateX(-50%);
+}
+
+/* 테스트 드라이브 */
+#test_drive{text-align: center; height:500px;}
+#test_drive article{
+  width:430px;height:280px;
+  padding:15px;
+  margin-top:50px;
+  border:1px solid var(--sub-color04);
+  display:inline-block;
+  vertical-align: middle; /* a태그가 block이 되면, article이 단차가 생기는 걸 없애줌 */
+}
+#test_drive .test_drive_l{
+  margin-right:30px;
+}
+#test_drive article h3{
+  font-size:24px;
+  padding-top:20px;
+  font-weight:bold;
+  line-height:40px;
+}
+#test_drive article p{
+  font-size: var(--font-size1);
+  font-weight:bold;
+  line-height:20px;
+  padding:20px 0px;
+  margin-bottom:30px;
+}
+#test_drive .test_d_p{ /* 앞에 부모를 붙여야(점수가 높아져서) font-weight가 먹힘*/
+  color:rgba(0,0,0,0.6);
+  font-weight:normal;
+  transform:translateY(40px);
+}
+#test_drive .test_drive_r .test_d_p{
+  transform:translateY(53px);
+}
+.test_d_btn1{
+  background-color: var(--sub-color01);
+  color:var(--bg-color03);
+  line-height:30px;
+  padding:10px 60px;
+  /* display: block; */
+}
+
+#test_drive .test_drive_l .test_d_btn2{
+  display:block;
+  position:relative; top:20px;
+  color:var(--t-color03);
+  font-weight:450;
+}
+
+/* 5. 이벤트 프로모션 서식 */
+#event_promo{
+  text-align: center;
+  width:100%; height:600px;
+  background-color: #ccc;
+  padding-top:50px;
+}
+.event{
+  position:relative;
+  padding-top:15px;
+  margin-top:50px;
+  width:1200px;
+  margin:0px auto;
+  overflow:hidden;
+  padding-bottom:70px;
+}
+#event_promo .event .swiper-pagination-bullet{
+  width:10px;
+  border-radius:50%;
+  background-color: #333;
+  transition:0.8s;
+}
+#event_promo .event .swiper-pagination-bullet-active{
+  width:50px;
+  border-radius:20px;
+  background-color: #333;
+}
+/* #event_promo .event .swiper-button-next, #event_promo .event .swiper-button-prev{
+  color:#333;
+  background-color: rgba(255,255,255,0.7);
+  width:40px; height:40px;
+  border-radius:30px;
+  
+}
+#event_promo .event .swiper-button-next:after, #event_promo .event .swiper-button-prev:after{
+  font-size:16px;
+  font-weight:bold;
+}
+#event_promo .event .swiper-button-next{
+  right:0px;
+}
+#event_promo .event .swiper-button-prev{
+  left:-0px;
+} */
+
+/* 6. 캐스퍼 구매 안내 서식 */
+#buy{text-align: center;}
+#buy .p01{font-size:14px; line-height:8px;}
+#buy h3{
+  font-size:24px;
+  text-align: center;
+  font-weight:500;
+  padding-top:60px;
+}
+.t_color{color:#043e96;}
+.cont-wrap{
+  width:1200px;
+  margin:100px 0px;
+  display:grid;
+  grid-gap:30px;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 
+    "cont01 cont02 cont03"
+    "cont04 cont05 cont06"
+  ;
+}
+.cont01{grid-area:cont01;}
+.cont02{grid-area:cont02;}
+.cont03{grid-area:cont03;}
+.cont04{grid-area:cont04;}
+.cont05{grid-area:cont05;}
+.cont06{grid-area:cont06;}
+.cont-wrap img{width:70px; padding:10px 0px;}
+.cont p:first-of-type{
+  font-size:16px;
+  font-weight:bold;
+  line-height: 40px;;
+}
+.cont p:last-of-type{
+  font-size:12px;
+  line-height:24px;
+}
+#buy iframe{width:1200px;height:600px;}
+
+/* 버튼서식 */
+.btn{
+  border:1px solid #333;
+  background-color: #fff;
+  padding:8px 26px;
+}
+.b_btn{}
+
+/* 팝업창 서식 */
+.popup{
+  width:100%;height:100%;
+  position:fixed;
+  top:0px; left:0px;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+.popup-inner{
+  background-color: #eee;
+  width:450px;
+  height:625px;
+  position:absolute;
+  margin:auto;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+}
+.popup-close{float:right; border:none;} 
 
 
 

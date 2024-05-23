@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +17,9 @@
   <link rel="stylesheet" href="./css/swiper.css" type="text/css">
   <!-- 아이콘폰트 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
+
 </head>
+
 <body>
   <!-- 상단헤더영역 -->
   <header>
@@ -40,7 +42,7 @@
     <a href="login.html" title="로그인"><i class="fas fa-user"></i></a>
     <i class="fas fa-bell"></i>
   </header>
-  
+
   <!-- 원형 내비게이션 -->
   <nav id="m_navi">
     <ul>
@@ -54,10 +56,11 @@
 
   <!-- 메인콘텐츠영역 -->
   <main>
-    <section id="intro">
+    <!-- 1. 메인 인트로 영역 -->
+    <section id="main-intro">
       <article>
         <h2 class="sect-title">CASPER</h2>
-        <p>오직 캐스퍼 온라인에서만 구매하실 수 있습니다.</p>
+        <p class="p01">오직 캐스퍼 온라인에서만 구매하실 수 있습니다.</p>
         <a href="#none" title="나만의 캐스퍼 만들기">나만의 캐스퍼 만들기</a>
         <a href="#none" title="구매 혜택보기">구매 혜택보기</a>
         <a href="#none" title="자세히 보기">자세히 보기</a>
@@ -67,16 +70,157 @@
       </video>
       <a href="#" title="아래로 이동" class="next-page">&nbsp;</a>
     </section>
-
-    <!-- <div class="popup">
-      <div class="popup-inner">
-        <a href="#none" title="팝업창">
-          <img src="./images/main_Popup_PC_450x600.jpg" alt="팝업이미지">
-        </a>
-        <input type="checkbox" id="today"><label for="today">오늘 하루 열지 않음</label>
-        <input type="button" value="닫기" class="popup-close">
+    <!-- 2. top3 콘텐츠 영역 -->
+    <section id="top3">
+      <h2 class="sect-title2">가장 많이 찾는 캐스퍼</h2>
+      <p class="p01">지금 가장 인기 있는 조합을 확인해 보세요.</p>
+      <!-- swiper slide -->
+      <div class="swiper top3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <span class="rank">1위</span>
+            <h3 class="top3_title">가솔린 1.0 디 에센셜</h3>
+            <img src="./images/color_khaki.02b812c.png" alt="카키">
+            <ul class="detail">
+              <li><span class="outer_color kaki">카키</span>외장색상<br> 톰보이 카키</li>
+              <li><span class="inner_color grey">그레이</span>내장색상<br> 그레이</li>
+              <li>선택품목<br> 현대스마트센스 1</li>
+              <li><em class="price">18,253,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+          <div class="swiper-slide">
+            <span class="rank">2위</span>
+            <h3 class="top3_title">가솔린 1.0 터보 디 에센셜</h3>
+            <img src="./images/color_blue.3c888d7.png" alt="블루">
+            <ul class="detail">
+              <li><span class="outer_color blue">블루</span>외장색상<br> 인텐스 블루 펄</li>
+              <li><span class="inner_color grey">그레이</span>내장색상<br> 그레이</li>
+              <li>선택품목<br> 캐스퍼 액티브 2</li>
+              <li><em class="price">17,298,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+          <div class="swiper-slide">
+            <span class="rank">3위</span>
+            <h3 class="top3_title">가솔린 1.0 터보 디 에센셜</h3>
+            <img src="./images/color_ivory.112b874.png" alt="아이보리">
+            <ul class="detail">
+              <li><span class="outer_color ivory">아이보리</span>외장색상<br> 언블리드 아이보리</li>
+              <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+              <li>선택품목<br> 캐스퍼 액티브 2</li>
+              <li><em class="price">18,189,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+        </div>
+        <!-- 콘트롤 버튼 - pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- 좌우버튼 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-    </div> -->
+    </section>
+    <!-- 3. 소개 콘텐츠 -->
+    <section id="intro">
+      <h2 class="sect-title2">소개</h2>
+      <span class="intro_title_left">강인하고<br> 아이코닉한 SUV</span>
+      <span class="intro_title_right">젊고 역동적인<br>감성의<br> SUV디자인</span>
+      <video autoplay muted>
+        <source src="./movie/highlight_intro.mp4" type="video/mp4">
+      </video>
+      <input type="button" value="더보기 &gt;" class="btn b_btn">
+    </section>
+    <!-- 4. 시승신청 -->
+    <section id="test_drive">
+      <h2 class="sect-title2">시승신청</h2>
+      <p class="p01">캐스퍼가 제공하는 편리한 시승 서비스를 이용해 보세요.</p>
+
+      <article class="test_drive_l">
+        <h3>현대자동차 드라이빙 라운지 <br>/ CASPER STUDIO시승</h3>
+        <p>드라이빙 라운지와 CASPER STUDIO에서<br> 캐스퍼를 체험해 보세요.</p>
+        <a href="test_drive.html" title="시승신청예약" class="test_d_btn1">시승 신청하기</a>
+        <a href="test_drive.html" title="시승신청조회" class="test_d_btn2">시승 신청조회&#x003E;</a>
+        <p class="test_d_p">&middot; 시승 신청은 만 21세 이상 운전면허 소지자면 누구나 이용 가능합니다.</p>
+      </article>
+
+      <article class="test_drive_r">
+        <h3>쏘카<br>카쉐어링 시승</h3>
+        <p>24시간 언제나 내 근처에서 편리하게<br>캐스퍼를 체험할 수 있습니다.</p>
+        <a href="test_drive.php" title="시승신청예약" class="test_d_btn1">시승 신청하기</a>
+        <p class="test_d_p">&middot; 쏘카는 만 21세 이상, 운전면허 취득 1년 이상 시 이용할 수 있습니다.</p>
+      </article>
+    </section>
+    <!-- 5. 이벤트 프로모션 -->
+    <section id="event_promo">
+      <h2 class="sect-title2">이벤트 &amp; 프로모션</h2>
+      <p class="p01">다양한 이벤트 &amp; 프로모션과 함께 캐스퍼를 만나보세요.</p>
+      <div class="swiper event">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#none" title=""><img src="./images/event01.png" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none" title=""><img src="./images/event02.jpg" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none" title=""><img src="./images/event03.jpg" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none" title=""><img src="./images/event04.jpg" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none" title=""><img src="./images/event05.jpg" alt=""></a>
+          </div>
+        </div>
+        <!-- 콘트롤 버튼 - pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- 좌우버튼 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </section>
+    <!-- 6. 캐스퍼 구매안내 -->
+    <section id="buy">
+      <h2 class="sect-title2">캐스퍼구매 안내</h2>
+      <p class="p01">구매 절차를 차근차근 알려드립니다.</p>
+      <h3>캐스퍼, <span class="t_color">온라인</span>에서만<span class="t_color">구매</span>할 수 있습니다.</h3>
+
+      <div class="cont-wrap">
+        <div class="cont cont01">
+          <p>쉬운 모델 선택</p>
+          <img src="./images/icon_01.jpg" alt="아이콘1">
+          <p>원하는 사양의 차량을 3D로 확인해 볼 수 있고,<br>데이터를 기반으로 나에게 맞는 캐스퍼를 추천받을 수 있습니다.</p>
+        </div>
+        <div class="cont cont02">
+          <p>쉬운 모델 선택</p>
+          <img src="./images/icon_02.jpg" alt="아이콘2">
+          <p>구매 시뮬레이션을 통해<br>나의 자금 사정에 맞는<br>구매 계획을 세울 수 있습니다.</p>
+        </div>
+        <div class="cont cont03">
+          <p>자유로운 취소/변경</p>
+          <img src="./images/icon_03.jpg" alt="아이콘3">
+          <p>계약 후에도 차량대금 결제 전이라면<br>자유롭게 원하는 사양으로 변경하고,<br>계약을 취소할 수 있습니다.(단, 특별주문자 제외)</p>
+        </div>
+        <div class="cont cont04">
+          <p>찾아가는 배송</p>
+          <img src="./images/icon_04.jpg" alt="아이콘4">
+          <p>집, 직장 등 내가 원하는 장소에서<br>캐스퍼를 배송 받을 수 있습니다.</p>
+        </div>
+        <div class="cont cont05">
+          <p>진행 단계 알림</p>
+          <img src="./images/icon_05.jpg" alt="아이콘5">
+          <p>계약부터 차량 등록까지<br>나의 계약 진행 상태를 메시지로 전송받을 수 있습니다.</p>
+        </div>
+        <div class="cont cont06">
+          <p>향상된 고객지원</p>
+          <img src="./images/icon_06.jpg" alt="아이콘6">
+          <p>밤 10시까지 캐스퍼 고객센터(080-500-6000)를 통해 문의사항을<br>해결할 수 있고, 현대자동차의<br>직영서비스센터와 블루핸즈도 이용할 수 있습니다.</p>
+        </div>
+      </div>
+      <!-- 유튜브 영상 - 캐스퍼 온라인 구매가이드 -->
+      <iframe src="https://www.youtube.com/embed/MQSGzDRejUM?si=V5aSdHf6wZ5lgJeu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
   </main>
 
   <!-- 하단푸터영역 -->
@@ -118,13 +262,47 @@
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
   <!-- 제이쿼리 쿠키 -->
   <script src="./script/jquery.cookie.js"></script>
+  <!-- 스와이퍼 js -->
+  <script src="./script/swiper.js"></script>
+  <!-- main.js -->
+  <script src="./script/main.js"></script>
   <script>
     // let btn_close = document.querySelector('.popup-close');
     // btn_close.addEventListener('click', function(){
     //   document.querySelector('.popup').style.display='none';
     // });
+    var swiper = new Swiper('.top3', {
+      autoplay: {
+        // delay:3000,
+        disableOnInteraction: false,
+      },
+      loop: false,
+      navigation: {
+        nextEl: ".top3 .swiper-button-next",
+        prevEl: ".top3 .swiper-button-prev",
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+    var swiper = new Swiper('.event', {
+      autoplay: {
+        // delay:3000,
+        disableOnInteraction: false,
+      },
+      loop: false,
+      navigation: {
+        nextEl: ".event .swiper-button-next",
+        prevEl: ".event .swiper-button-prev",
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
 
-    $(document).ready(function(){
+    $(document).ready(function () {
       //1.변수선언
       let modal = `
       <div class="popup">
@@ -144,27 +322,28 @@
       let checked = $('#today'); //input 선택자를 가져와야함
 
       //현재 사용자가 브라우저에서 쿠키정보가 있다면 모달창이 안나옴
-      if($.cookie('popup')=='checked'){
+      if ($.cookie('popup') == 'checked') {
         popup.hide();
       }
       //체크박스를 체크하고 '닫기'버튼 누르면 모달창이 닫힘
-      function close_popup(){
-        if(checked.is(':checked')){ //체크가 된 경우라면
+      function close_popup() {
+        if (checked.is(':checked')) { //체크가 된 경우라면
           //쿠키정보 저장하고 닫기
-          $.cookie('popup', 'checked', {expires:7, path:'/'}); // 쿠키이름을 'popup', value값을 'checked'값으로 생성
+          $.cookie('popup', 'checked', { expires: 7, path: '/' }); // 쿠키이름을 'popup', value값을 'checked'값으로 생성
           popup.hide();
-        }else{ //체크 안 된 경우라면
+        } else { //체크 안 된 경우라면
           //쿠키정보 생성하지 않고 닫기
           popup.hide();
         }
       }
 
       //닫기 버튼 클릭시 close_popup함수 호출하여 실행
-      $('.popup-close').click(function(){
+      $('.popup-close').click(function () {
         close_popup();
       })
-      
+
     })
   </script>
 </body>
+
 </html>
