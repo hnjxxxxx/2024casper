@@ -6,6 +6,9 @@
   height:500px;
   background-color: rgb(206, 213, 224);
   margin:auto;
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
 }
 #login fieldset{
   width:400px;
