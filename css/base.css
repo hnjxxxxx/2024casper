@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap");
+
+/* 모든 페이지에 공통으로 적용되는 서식 */
+/* root변수 설정 */
+:root{
+  --t-color01:#333;
+  --t-color02:#fff;
+  --t-color03:#066aad;
+  --bg-color01:#006eff;
+  --bg-color02:#212772;
+  --bg-color03:#fff;
+  --sub-color01:#215499;
+  --sub-color02:#042653;
+  --sub-color03:#2986A7;
+  --f-color01:#333;
+  --main-font:'Noto Sans KR';
+  --font-size-base:12px;
+  --font-size1:14px;
+  --font-size2:16px;
+}
+/* body 서식 */
+body {
+  background:var(--bg-color03);
+  font-family: var(--main-font), '맑은 고딕', sans-serif;
+  font-size: var(--font-size-base);
+  color: var(--t-color01);
+  overflow-x:hidden;
+}
+/* 링크서식 */
+a{
+  color:var(--t-color01);
+  text-decoration:none;
+  font-size:var(--font-size-base);
+}
