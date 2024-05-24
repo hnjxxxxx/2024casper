@@ -4,38 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>로그인 폼</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 기본서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <!-- 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- 아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="./css/login.css" type="text/css">
+  <!-- 서브페이지 서식 -->
+  <style>
+    header{
+      position:static;
+      background-color:rgba(0,0,0,0.6);
+    }
+    main{height:700px;}
+  </style>
 </head>
+
 <body>
-  <form name="login" id="login">
-    <div class="login_wrap">
-      <fieldset>
-        <legend>로그인 폼</legend>
-        <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo-hyundai.a9ebdc6.png" alt="로고"></a>
-        <p>
-          <label for="id_txt">ID : </label>
-          <input type="text" maxlength="16" id="id_txt" name="id_txt" placeholder="아이디 입력" autocomplete="off">
-        </p>
-        <p>
-          <label for="pw_txt">PW : </label>
-          <input type="password" maxlength="16" id="pw_txt" name="pw_txt" placeholder="비밀번호 입력" autocomplete="off">
-        </p>
-        <p>
-          <input type="checkbox" id="id_save">
-          <label for="id_save">아이디 저장</label>
-        </p>
-        <p>
-          <input type="submit" value="로그인" id="login_btn">
-        </p>
-        <p>
-          <a href="#none" title="아이디 찾기">아이디 찾기</a>
-          <a href="#none" title="비밀번호 찾기">비밀번호 찾기</a>
-          <a href="#none" title="회원가입">회원가입</a>
-        </p>
-      </fieldset>
+  <!-- 상단헤더영역 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo-casper-white.png" alt="캐스퍼로고">
+      </a>
+    </h1>
+    <!-- 내비게이션 -->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#none" title="소개">소개</a></li>
+        <li><a href="#none" title="체험">체험</a></li>
+        <li><a href="#none" title="이벤트">이벤트</a></li>
+        <li><a href="#none" title="구매">구매</a></li>
+        <li><a href="#none" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+    <!-- 헤더 우측 아이콘 - 유저, 알림 -->
+    <a href="login.html" title="로그인"><i class="fas fa-user"></i></a>
+    <i class="fas fa-bell"></i>
+  </header>
+  <main>
+    <form name="login" id="login">
+      <div class="login_wrap">
+        <fieldset>
+          <legend>로그인 폼</legend>
+          <a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo-casper_black.png" alt="로고"></a>
+          <p>
+            <label for="id_txt">ID : </label>
+            <input type="text" maxlength="16" id="id_txt" name="id_txt" placeholder="아이디 입력" autocomplete="off">
+          </p>
+          <p>
+            <label for="pw_txt">PW : </label>
+            <input type="password" maxlength="16" id="pw_txt" name="pw_txt" placeholder="비밀번호 입력" autocomplete="off">
+          </p>
+          <p>
+            <input type="checkbox" id="id_save">
+            <label for="id_save">아이디 저장</label>
+          </p>
+          <p>
+            <input type="submit" value="로그인" id="login_btn">
+          </p>
+          <p>
+            <a href="#none" title="아이디 찾기">아이디 찾기</a>
+            <a href="#none" title="비밀번호 찾기">비밀번호 찾기</a>
+            <a href="#none" title="회원가입">회원가입</a>
+          </p>
+        </fieldset>
+      </div>
+    </form>
+  </main>
+  
+  <!-- 하단푸터영역 -->
+  <footer>
+    <div class="f_inner">
+      <h2>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo-hyundai.a9ebdc6.png" alt="하단로고">
+        </a>
+      </h2>
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="#none" title="이용약관">이용약관</a></li>
+          <li><a href="#none" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="#none" title="저작권안내">저작권안내</a></li>
+          <li><a href="#none" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="#none" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <dl>
+          <dt>사업자등록번호 :</dt>
+          <dd>101-00-00000</dd>
+          <dt>통신판매업신고번호 :</dt>
+          <dd>2022-012345</dd>
+          <dt>대표이사 :</dt>
+          <dd>장재훈</dd>
+          <dt>주소 :</dt>
+          <dd>서울시 서초구 헌릉로 12</dd>
+          <dt>호스팅 서비스 제공 :</dt>
+          <dd>현대오토에버(주)</dd>
+        </dl>
+        <p>copyright&copy; 2023 HYUNDAI MOTOR COMPANY, ALL RIGHTS RESERVED.</p>
+      </address>
     </div>
-    
-  </form>
+  </footer>
+
 
   <!-- 제이쿼리 cdn -->
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>

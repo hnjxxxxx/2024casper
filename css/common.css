@@ -1,9 +1,9 @@
 @charset "utf-8";
 @import url('./base.css');
 /* common.css - header, footer 서식 */
-
+/* html, body{scroll-behavior: smooth;} */
 header{
-  position:fixed;
+  position:absolute;
   width:100%;
   height:70px;
   z-index: 999;
@@ -122,3 +122,12 @@ address{
 address dt, address dd{
   display:inline-block;
 }
+
+/* 스크롤시 헤더 배경에 넣을 서식 */
+.h_act{
+  position:fixed;
+  background-color: rgba(255,255,255,0.8) !important;
+  color:#fff;
+  z-index: 9999;
+}
+.h_act .gnb li a, .h_act i{color:var(--f-color01) !important;}
